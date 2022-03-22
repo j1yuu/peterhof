@@ -1,0 +1,42 @@
+* {
+    box-sizing : border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin     : 0;
+    padding    : 0;
+}
+
+html {
+    font-size: 0.69444444vw;
+}
+
+img {
+    height    : 100%;
+    width     : 100%;
+    object-fit: contain;
+}
+
+a,
+a:focus {
+    text-decoration: none;
+    color          : inherit;
+}
+
+.container {
+    margin: 0 auto;
+    width : 120rem;
+}
+
+.slider__wrapper {
+    overflow: hidden;
+}
+
+@media (max-width: 48em) {
+    html {
+        font-size: 3.125vw;
+    }
+
+    .container {
+        width: 28rem;
+    }
+}
