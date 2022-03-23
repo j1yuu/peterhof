@@ -36,14 +36,14 @@ const mySwap = () => {
     let i = 0;
 
     butnext[3].addEventListener('click', () => {
-        if (i != 2) {
+        if (i != 3) {
             card[i].classList.toggle('hidden');
             card[i + 1].classList.toggle('hidden');
             i++
         } else {
             card[i].classList.toggle('hidden');
-            card[i + 1].classList.toggle('hidden');
-            i++
+            card[0].classList.toggle('hidden');
+            i = 0;
         };
     });
 
@@ -54,8 +54,8 @@ const mySwap = () => {
             i--
         } else {
             card[i].classList.toggle('hidden');
-            card[i - 1].classList.toggle('hidden');
-            i--
+            card[3].classList.toggle('hidden');
+            i = 3
         };
     });
 };
@@ -64,8 +64,10 @@ mySwap();
 
 const myScroll = () => {
     const links = document.querySelectorAll('.header__link');
+    const landbut = document.querySelector('.landing__next');
+    const landbutMob = document.querySelector('.landing__next--mobile');
 
-    const newArray = [...links];
+    const newArray = [...links, landbut, landbutMob];
 
     newArray.forEach((element) => {
         element.addEventListener('click', (event) => {
@@ -84,6 +86,7 @@ const myScroll = () => {
             }
         })
     })
+
 };
 
 myScroll()
